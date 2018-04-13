@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    .introduction {
+        font-size: 1.5rem;
+        .my-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+    }
+    .footer {
+        display: flex;
+    }
+}

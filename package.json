@@ -1,0 +1,15 @@
+{
+  "name": "personal-page",
+  "version": "0.0.0",
+  "description": "Attila Polgar's personal page",
+  "scripts": {
+    "deploy:gh-pages": "push-dir --dir=src --branch=gh-pages --cleanup"
+  },
+  "main": "index.js",
+  "repository": "git@github.com:raglopa/personal-page.git",
+  "author": "Attila Polgar <raglopa@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "push-dir": "^0.4.1"
+  }
+}

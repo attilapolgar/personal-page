@@ -10,6 +10,7 @@
   "main": "index.js",
   "repository": "git@github.com:raglopa/personal-page.git",
   "author": "Attila Polgar <raglopa@gmail.com>",
+  "homepage": "http://attilapolgar.com",
   "license": "MIT",
   "devDependencies": {
     "node-sass": "^4.8.3",

@@ -1,0 +1,7 @@
+.delayed {
+  opacity: 0;
+  transition: all 1s;
+  &.visible {
+    opacity: 1;
+  }
+}

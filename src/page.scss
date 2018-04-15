@@ -1,60 +1,79 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+$baseColor: #2d506d;
+$shadowColor: darken($baseColor,
+10%);
 body {
-  font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  background: radial-gradient(seagreen, darkseagreen);
-  cursor: default;
-  .introduction {
-    text-align: center;
-    .title {
-      height: 84px;
-      font-size: 1.5rem; // height: 3rem;
-      #my-name {
-        font-size: 1.8rem;
-        font-weight: bold;
-        padding: 1rem;
-      }
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient( darken($baseColor, 10%), lighten($baseColor, 10%));
+    cursor: default;
+    #wrapper {
+        padding: 3rem 5rem;
+        border-radius: 25px;
+        background: lighten($baseColor, 80%);
+        box-shadow: 2px 2px 20px 0 $shadowColor;
+        transition: all 0.6s;
+        &:hover {
+            box-shadow: 8px 8px 20px 0 $shadowColor;
+        }
+        color: #000;
+        .introduction {
+            text-align: center;
+            .title {
+                height: 84px;
+                font-size: 1.5rem;
+                #my-name {
+                    font-size: 2rem;
+                    font-weight: bold;
+                    padding: 1rem;
+                }
+            }
+            #about-me {
+                padding: 2rem 0;
+                font-size: 1.2rem;
+                .location {
+                    font-weight: bold;
+                }
+            }
+        }
+        #social {
+            a {
+                text-decoration: none;
+            }
+            margin-top: 2rem;
+            text-align: center;
+            .social-image {
+                margin: 0 1rem;
+                width: 4rem;
+                height: 4rem;
+                transform: scale(0.8);
+                transition: all 0.6s;
+                &:hover {
+                    transform: scale(1);
+                }
+            }
+        }
     }
-    #about-me {
-      padding: 2rem 0;
-    }
-  }
-  #social {
-    a {
-      text-decoration: none;
-    }
-    margin: 2rem;
-    .social-image {
-      margin: 0 1rem;
-      width: 4rem;
-      height: 4rem;
-      transform: scale(0.8);
-      transition: all 0.6s;
-      &:hover {
-        transform: scale(1);
-      }
-    }
-  }
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  flex: 1;
-  justify-content: space-around;
-  width: 100%;
-  align-items: center;
-  background-color: rgba(128, 128, 128, 0.342);
-  height: 3rem;
-  font-size: 0.8rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.342);
+    height: 3rem;
+    font-size: 0.8rem;
 }

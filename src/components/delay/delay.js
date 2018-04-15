@@ -1,10 +1,24 @@
 import './delay.scss'
 
-const delayElement = (element, delay = 1000) => {
+const delayElement = (e, delay) => {
+  const element = document.getElementById(e)
+  let timeout = null
   element.classList.add('delayed')
-  window.setTimeout(() => {
-    element.classList.add('visible')
-  }, delay)
+
+  const start = () => {
+    timeout = window.setTimeout(() => {
+      element.classList.add('visible')
+    }, delay)
+  }
+
+  const cancel = () => {
+    window, clearTimeout(timeout)
+  }
+
+  return {
+    start,
+    cancel,
+  }
 }
 
 export default delayElement

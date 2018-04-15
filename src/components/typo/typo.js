@@ -1,4 +1,4 @@
-const qwertyKeyboardArray = [
+const qwertyKeyboard = [
   ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '='],
   ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '\\'],
   ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', "'"],
@@ -6,7 +6,7 @@ const qwertyKeyboardArray = [
   ['', '', ' ', ' ', ' ', ' ', ' ', '', ''],
 ]
 
-const qwertyShiftedKeyboardArray = [
+const qwertyShiftedKeyboard = [
   ['~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+'],
   ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '{', '}', '|'],
   ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ':', '"'],
@@ -15,8 +15,8 @@ const qwertyShiftedKeyboardArray = [
 ]
 
 const findTypo = char => {
-  const line = [...qwertyKeyboardArray, ...qwertyShiftedKeyboardArray].find(
-    line => line.includes(char)
+  const line = [...qwertyKeyboard, ...qwertyShiftedKeyboard].find(line =>
+    line.includes(char)
   )
   const index = line.findIndex(i => i === char)
   const neighbors = [line[index - 1], line[index + 1]].filter(
@@ -26,7 +26,7 @@ const findTypo = char => {
   return neighbors[r]
 }
 
-const replaceAt = (string, index, replacement) =>
+export const replaceAt = (string, index, replacement) =>
   `${string.substr(0, index)}${replacement}${string.substr(
     index + replacement.length
   )}`

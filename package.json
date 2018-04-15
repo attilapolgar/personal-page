@@ -5,20 +5,25 @@
   "scripts": {
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html && node scripts/cname.js",
-    "deploy:gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "deploy:gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup",
+    "test": "jest"
   },
   "main": "index.js",
   "repository": "git@github.com:raglopa/personal-page.git",
   "author": "Attila Polgar <raglopa@gmail.com>",
   "homepage": "http://attilapolgar.com",
   "license": "MIT",
-  "devDependencies": {
-    "node-sass": "^4.8.3",
-    "parcel-bundler": "^1.7.0",
-    "push-dir": "^0.4.1"
-  },
   "dependencies": {
     "reset-css": "^3.0.0",
     "typed.js": "^2.0.6"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.3",
+    "jest": "^22.4.3",
+    "node-sass": "^4.8.3",
+    "parcel-bundler": "^1.7.0",
+    "push-dir": "^0.4.1",
+    "regenerator-runtime": "^0.11.1"
   }
 }

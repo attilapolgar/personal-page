@@ -6,7 +6,7 @@ const typedString = `Attila Polgar`
 
 const typed = new Typed('#my-name', {
   strings: [typo(typedString), typedString],
-  typeSpeed: 120,
+  typeSpeed: 150,
   backDelay: 50,
   startDelay: 100,
   showCursor: false,
@@ -14,5 +14,5 @@ const typed = new Typed('#my-name', {
 
 const aboutMeElement = document.getElementById('about-me')
 const socialElement = document.getElementById('social')
-delayElement(aboutMeElement, 3000)
-delayElement(socialElement, 4500)
+delayElement(aboutMeElement, 4000)
+delayElement(socialElement, 5500)

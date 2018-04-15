@@ -3,7 +3,12 @@ import './delay.scss'
 const delayElement = (e, delay) => {
   const element = document.getElementById(e)
   let timeout = null
-  element.classList.add('delayed')
+
+  if (element) {
+    element.classList.add('delayed')
+  } else {
+    console.warn(`element not found: ${e}`)
+  }
 
   const start = () => {
     timeout = window.setTimeout(() => {

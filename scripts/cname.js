@@ -1,9 +1,9 @@
-const fs = require('fs')
+const fs = require("fs");
 
-fs.writeFile(`dist/CNAME`, 'attilapolgar.com', function(err) {
+fs.writeFile(`dist/CNAME`, "polgar.dev", function(err) {
   if (err) {
-    console.err(err)
+    console.err(err);
   } else {
-    console.info('CNAME copied to dist')
+    console.info("CNAME copied to dist");
   }
-})
+});

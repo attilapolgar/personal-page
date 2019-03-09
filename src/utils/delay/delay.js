@@ -1,6 +1,6 @@
 import './delay.scss'
 
-const delayElement = (e, delay) => {
+export const delayElement = (e, delay) => {
   const element = document.getElementById(e)
   let timeout = null
 
@@ -17,13 +17,11 @@ const delayElement = (e, delay) => {
   }
 
   const cancel = () => {
-    window, clearTimeout(timeout)
+    clearTimeout(timeout)
   }
 
   return {
     start,
-    cancel,
+    cancel
   }
 }
-
-export default delayElement

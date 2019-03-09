@@ -6,7 +6,8 @@
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html && node scripts/cname.js",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint src/**/*.js"
   },
   "main": "index.js",
   "repository": "git@github.com:raglopa/personal-page.git",
@@ -23,6 +24,12 @@
     "babel-plugin-transform-custom-element-classes": "^0.1.0",
     "babel-plugin-transform-es2015-classes": "^6.24.1",
     "babel-preset-env": "^1.7.0",
+    "eslint": "^5.15.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
     "parcel-bundler": "^1.12.0",
     "push-dir": "^0.4.1",
     "sass": "^1.17.2"

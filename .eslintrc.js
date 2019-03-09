@@ -8,7 +8,9 @@ module.exports = {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
     test: true,
-    expect: true
+    expect: true,
+    describe: true,
+    it: true
   },
   parserOptions: {
     ecmaVersion: 2018,

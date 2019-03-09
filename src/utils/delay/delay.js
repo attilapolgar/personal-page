@@ -1,5 +1,3 @@
-import './delay.scss'
-
 export const delayElement = (e, delay) => {
   const element = document.getElementById(e)
   let timeout = null

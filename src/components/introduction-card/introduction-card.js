@@ -24,6 +24,9 @@ class IntroductionCard extends HTMLElement {
         <a href="https://www.linkedin.com/in/attilapolgar/" target="_blank">
           <div class="social-image linkedin" title="my linkedin profile" alt="my linkedin profile"></div>
         </a>
+        <a href="https://www.instagram.com/raglopa/" target="_blank">
+          <div class="social-image instagram" title="my instagram profile" alt="my instagram profile"></div>
+        </a>
       </div>
     </div>
   `

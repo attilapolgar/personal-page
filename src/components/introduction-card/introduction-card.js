@@ -1,13 +1,10 @@
 import Typed from 'typed.js'
-import typo from '../typo/typo'
-import delayElement from '../delay/delay'
 import './style'
+import { delayElement } from '../../utils/delay/delay'
+import { typo } from '../../utils/typo/typo'
 
 class IntroductionCard extends HTMLElement {
-  constructor() {
-    super()
-  }
-  connectedCallback() {
+  connectedCallback () {
     console.log('IntroductionCard::connectedCallback')
     this.innerHTML = `
     <div>
@@ -26,6 +23,9 @@ class IntroductionCard extends HTMLElement {
         </a>
         <a href="https://www.linkedin.com/in/attilapolgar/" target="_blank">
           <div class="social-image linkedin" title="my linkedin profile" alt="my linkedin profile"></div>
+        </a>
+        <a href="https://www.instagram.com/raglopa/" target="_blank">
+          <div class="social-image instagram" title="my instagram profile" alt="my instagram profile"></div>
         </a>
       </div>
     </div>
@@ -46,10 +46,12 @@ class IntroductionCard extends HTMLElement {
       backDelay: 50,
       startDelay: 0,
       showCursor: false,
-      onComplete,
+      onComplete
     })
+
+    typed()
   }
-  disconnectedCallback() {
+  disconnectedCallback () {
     console.log('IntroductionCard::disconnectedCallback')
   }
 }

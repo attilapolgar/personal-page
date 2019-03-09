@@ -1,9 +1,0 @@
-.delayed {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 1s;
-  &.visible {
-    opacity: 1;
-    visibility: visible;
-  }
-}

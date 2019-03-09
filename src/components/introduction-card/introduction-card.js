@@ -53,4 +53,5 @@ class IntroductionCard extends HTMLElement {
     console.log('IntroductionCard::disconnectedCallback')
   }
 }
+
 window.customElements.define('introduction-card', IntroductionCard)

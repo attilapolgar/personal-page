@@ -18,7 +18,7 @@ class IntroductionCard extends HTMLElement {
         </div>
       </div>
       <div id="social">
-        <a href="https://github.com/raglopa" target="_blank">
+        <a href="https://github.com/attilapolgar" target="_blank">
           <div class="social-image github" title="my github profile" alt="my github profile"></div>
         </a>
         <a href="https://www.linkedin.com/in/attilapolgar/" target="_blank">

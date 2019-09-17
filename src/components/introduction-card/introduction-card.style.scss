@@ -9,6 +9,9 @@ introduction-card {
     box-shadow: 8px 8px 20px 0 $shadowColor;
   }
   color: #000;
+  position: relative;
+
+  user-select: none;
   .introduction {
     text-align: center;
     .title {
@@ -53,6 +56,23 @@ introduction-card {
       &.linkedin {
         background-image: url("../../assets/linkedin.svg");
       }
+      &.instagram {
+        background-image: url("../../assets/instagram.svg");
+      }
+    }
+  }
+  #source-code {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    .icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url("../../assets/source-code.svg");
     }
   }
 }

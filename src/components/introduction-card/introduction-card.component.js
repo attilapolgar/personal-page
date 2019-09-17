@@ -7,8 +7,7 @@ const urls = {
   github: 'https://github.com/attilapolgar',
   linkedin: 'https://www.linkedin.com/in/attilapolgar',
   instagram: 'https://www.instagram.com/raglopa',
-  source:
-    'https://github.com/attilapolgar/personal-page/blob/master/src/components/introduction-card/introduction-card.js'
+  source: `https://github.com/attilapolgar/personal-page/blob/master/src/components/introduction-card/introduction-card.component.js`
 }
 
 class IntroductionCard extends HTMLElement {

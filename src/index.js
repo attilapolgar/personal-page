@@ -1,1 +1,1 @@
-import './components/introduction-card/introduction-card'
+import './components/introduction-card/introduction-card.component'

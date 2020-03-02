@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx } from "theme-ui";
+
 const Button = ({ variant = "primary", ...props }) => (
   <button
     {...props}
@@ -16,9 +17,10 @@ const Button = ({ variant = "primary", ...props }) => (
       py: 2,
       border: 0,
       borderRadius: 4,
+      cursor: "pointer",
       // pass variant prop to sx
       variant: `buttons.${variant}`
     }}
   />
-)
-export default Button
+);
+export default Button;

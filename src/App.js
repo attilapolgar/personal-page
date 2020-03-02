@@ -1,18 +1,18 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx } from "theme-ui";
 
-import { ThemeProvider, ColorMode } from "theme-ui"
-import { Grid, Link } from "@theme-ui/components"
+import { ThemeProvider, ColorMode } from "theme-ui";
+import { Grid, Link } from "@theme-ui/components";
 
-import appTheme from "./theme"
-import Project from "./components/Project"
-import ThemeSwitch from "./components/ThemeSwitch"
-import data from "./data"
-import Header from "./components/Header"
-import Button from "./elements/Button"
+import appTheme from "./theme";
+import Project from "./components/Project";
+import ThemeSwitch from "./components/ThemeSwitch";
+import data from "./data";
+import Header from "./components/Header";
+import Cover from "./components/Cover";
 
 function App() {
-  const projects = data.workplaces.map(wp => wp.projects).flat()
+  const projects = data.projects;
   return (
     <ThemeProvider theme={appTheme}>
       <Header />
@@ -25,16 +25,8 @@ function App() {
           variant: "layout.root"
         }}
       >
-        <header
-          sx={{
-            width: "100%",
-            diplay: "flex",
-            alignItems: "center",
-            variant: "layout.header"
-          }}
-        >
-          <ThemeSwitch />
-        </header>
+        <ThemeSwitch />
+        <Cover />
         <main
           sx={{
             width: "100%",
@@ -50,9 +42,7 @@ function App() {
               variant: "layout.container"
             }}
           >
-            <Button variant="primary">primary</Button>
-            <Button variant="secondary">secondary</Button>
-            <Grid gap={2} columns={[2, null, 4]}>
+            <Grid gap={2} columns={[1, 2]}>
               {projects.map(project => (
                 <Project key={project.id} {...project} />
               ))}
@@ -78,11 +68,11 @@ function App() {
             About
           </Link>
           <div sx={{ mx: "auto" }} />
-          <div sx={{ p: 2 }}>© 2019 Attila Polgar</div>
+          <div sx={{ p: 2 }}>© 2020 Attila Polgar</div>
         </footer>
       </div>
     </ThemeProvider>
-  )
+  );
 }
 
-export default App
+export default App;

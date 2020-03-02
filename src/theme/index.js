@@ -28,6 +28,10 @@ export default {
     body: "normal",
     caps: "0.2em"
   },
+  borderWidths: [1, 2],
+  borders: {
+    primary: "1px solid green"
+  },
   colors: {
     text: "#000",
     background: "#fff",
@@ -126,15 +130,5 @@ export default {
       boxShadow: "inset 0 0 0 1px"
     }
   },
-  layout: {
-    header: {
-      color: "white",
-      backgroundColor: "black",
-      mb: 10
-    },
-    footer: {
-      color: "white",
-      backgroundColor: "black"
-    }
-  }
+  layout: {}
 }
